@@ -7,3 +7,16 @@ sdcs
 done.
 sdfsdfr
 srfw...
+
+//Branch commands
+
+Prior to the introduction of git push -u, there was no git push option to obtain what you desire. You had to add new configuration statements.
+
+If you create a new branch using:
+
+$ git checkout -b branchB
+$ git push origin branchB:branchB
+You can use the git config command to avoid editing directly the .git/config file.
+
+$ git config branch.branchB.remote origin
+$ git config branch.branchB.merge refs/heads/branchB
